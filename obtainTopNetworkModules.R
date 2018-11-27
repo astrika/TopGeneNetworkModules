@@ -19,7 +19,7 @@ for(gene in top1percentSeedGenes){
 }
 topModulesContent <- read.table("topModulesContent.txt")
 topGenes <- topModulesContent[,2]
-write.table(print(levels(topGenes)), file = "nonRedundantTopGenes.txt", quote = F)
+write.table(print(levels(topGenes)), file = "nonRedundantTopGenes.txt", quote = F,col.names = F, row.names = F)
 amountofTopGenes <- length(levels(topGenes))
 
 
