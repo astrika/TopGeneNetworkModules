@@ -1,5 +1,6 @@
+# Astrid M Manuel 11/27/2018
 # set your node-weighted network to res.list and obtain all modules
-res.list <- load("C:\\users\\amanuel1\\Dev\\ZhaoLab\\MS\\Results\\RESULT.list2009o.RData")
+load("C:\\users\\amanuel1\\Dev\\ZhaoLab\\MS\\Results\\RESULT.list200950.RData")
 allModules <- res.list$genesets.clear
 
 # calculate the number of modules that should be included in your top 1% analysis
@@ -23,7 +24,4 @@ amountofTopGenes <- length(levels(topGenes))
 
 
 #print a message for summary of processes done
-message(paste("Content for top 1 percent modules were printed.", "\n", "You have", top1percent, "top 1 percent modules, and", amountofTopGenes, "non-redundant genes within these modules."))
-
-library(dmGWAS)
-simpleChoose(res.list, top=75, plot = T)
+message(paste("Content for top 1 percent modules was printed.", "\n", "You have", top1percent, "top 1 percent modules, and", amountofTopGenes, "non-redundant genes within these modules."))
