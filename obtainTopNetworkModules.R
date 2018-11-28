@@ -4,6 +4,7 @@
 # set your node-weighted network to res.list and obtain all modules
 load("C:\\users\\amanuel1\\Dev\\ZhaoLab\\MS\\Results\\RESULT.list2009o.RData")
 allModules <- res.list$genesets.clear
+total <- length(allModules)
 
 # calculate the number of modules that should be included in your top 1% analysis
 top1percent <- ceiling(length(allModules)*0.01)
@@ -17,8 +18,8 @@ top1percentSeedGenes <- top1percentModules$gene
 
 #obtain file of top modules content and all of the non redundant genes
 for(gene in top1percentSeedGenes){
-  write.table(print(allModules[gene]), file = "topModulesContent2009o.txt", append = T, col.names = F, quote = F)
+  write.table(print(getElement(allModules,gene)), file = "topModulesContent2009o.txt", append = T, col.names = F, quote = F)
 }
 
 #print a message for summary
-message(paste("Content for top 1 percent modules was printed.", "\n", "You have", top1percent, "top 1 percent modules."))
+message(paste("Content for top 1 percent modules was printed.", "\n", "Out of", total, "modules you have", top1percent, "top 1 percent modules."))
