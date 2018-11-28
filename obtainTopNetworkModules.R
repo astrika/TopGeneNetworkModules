@@ -1,6 +1,8 @@
 # Astrid M Manuel 11/27/2018
+# Top 1% network modules from dmGWAS results are examined for the highest association scores
+
 # set your node-weighted network to res.list and obtain all modules
-load("C:\\users\\amanuel1\\Dev\\ZhaoLab\\MS\\Results\\RESULT.list200950.RData")
+load("C:\\users\\amanuel1\\Dev\\ZhaoLab\\MS\\Results\\RESULT.list2009o.RData")
 allModules <- res.list$genesets.clear
 
 # calculate the number of modules that should be included in your top 1% analysis
