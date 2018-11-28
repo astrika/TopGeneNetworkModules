@@ -17,13 +17,8 @@ top1percentSeedGenes <- top1percentModules$gene
 
 #obtain file of top modules content and all of the non redundant genes
 for(gene in top1percentSeedGenes){
-  write.table(print(allModules[gene]), file = "topModulesContent.txt", append = T, col.names = F, quote = F)
+  write.table(print(allModules[gene]), file = "topModulesContent2009o.txt", append = T, col.names = F, quote = F)
 }
-topModulesContent <- read.table("topModulesContent.txt")
-topGenes <- topModulesContent[,2]
-write.table(print(levels(topGenes)), file = "nonRedundantTopGenes.txt", quote = F,col.names = F, row.names = F)
-amountofTopGenes <- length(levels(topGenes))
 
-
-#print a message for summary of processes done
-message(paste("Content for top 1 percent modules was printed.", "\n", "You have", top1percent, "top 1 percent modules, and", amountofTopGenes, "non-redundant genes within these modules."))
+#print a message for summary
+message(paste("Content for top 1 percent modules was printed.", "\n", "You have", top1percent, "top 1 percent modules."))
