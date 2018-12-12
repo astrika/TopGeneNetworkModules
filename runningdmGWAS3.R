@@ -22,4 +22,8 @@ control <- Table(gds4218)[,c(2,3,4)]
 brainLesions <- Table(gds4218)[,c(2,5,6,7,8,9)]
 
 #Running dms for EW_dmGWAS
+#EW_dmGWAS package: https://bioinfo.uth.edu/dmGWAS/
+install.packages("PATH_TO/dmGWAS_3.0.zip",repos=NULL,type="source")
+library(igraph)
+library(dmGWAS)
 dms(geneweight = geneweight, expr1 = control, expr2 = brainLesions, network = network)
